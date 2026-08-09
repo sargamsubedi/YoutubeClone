@@ -1,0 +1,93 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sidebarIcon {
+    width: 30px;
+
+}
+
+.notificationIcon{
+    width: 30px;
+}
+
+.searchIcon {
+    width: 30px;
+
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.searchContainer {
+    display: flex;
+    gap: 10px;
+}
+
+.search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30vw;
+    height: 50px;
+    padding:0 30px;
+    border: 1px solid gray;
+
+    border-radius: 100px;
+}
+
+.searchInput,
+.searchButton {
+    width: 100%;
+}
+
+.searchButton {
+    background-color: hsla(0, 0%, 100%, 0.277);
+}
+
+input {
+    color: white;
+    width: 28vw;
+    margin: 2px;
+    padding: 5px;
+    height: 25px;
+    background: transparent;
+    border: none;
+    font-size: large;
+}
+input::placeholder{
+    font-size: large;
+
+}
+
+input:focus {
+    outline: none;
+}
+
+.voiceSearch{
+    border-radius: 50%;
+    padding: 20px;
+    background-color: hsla(0, 0%, 100%, 0.277);
+}
+
+.create{
+    padding: 10px 20px;
+    border-radius: 7em;
+    background-color: rgb(47, 47, 47);
+}
+
+.account{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: rgb(51, 135, 168);
+}

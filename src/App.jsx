@@ -1,13 +1,13 @@
 
 import './App.css'
+import Navbar from './components/Navbar'
 import VideoCard from './components/VideoCard'
 
 function App() {
 
   return (
     <>
-    <h1>youtube clone</h1>
-    <VideoCard videoDetails={"nice"}/>
+    <Navbar />
     </>
   )
 }
