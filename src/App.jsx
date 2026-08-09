@@ -1,14 +1,25 @@
-
 import './App.css'
 import Navbar from './components/Navbar'
-import VideoCard from './components/VideoCard'
+import Sidebar from './components/Sidebar'
 
 function App() {
-
   return (
-    <>
-    <Navbar />
-    </>
+    <div className="app">
+      <Navbar />
+
+      <div className="main-sidebar-wrapper">
+        <Sidebar />
+
+        <main className="main-content">
+          <h1>This is for imitating main content</h1>
+
+          {/* Add enough content to test scrolling */}
+          <div style={{ height: '2000px' }}>
+            Main content
+          </div>
+        </main>
+      </div>
+    </div>
   )
 }
 

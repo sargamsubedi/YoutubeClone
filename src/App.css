@@ -1,0 +1,23 @@
+.main-sidebar-wrapper {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: 2px;
+
+  height: calc(100vh - 60px);
+  min-height: 0;
+}
+
+.main-content {
+  overflow-y: auto;
+  min-width: 0;
+}
+
+h1 {
+  border: 3px solid red;
+}
+
+@media (max-width: 600px) {
+  .main-sidebar-wrapper {
+    grid-template-columns: 50px 1fr;
+  }
+}

@@ -1,0 +1,9 @@
+.sidebar {
+  height: 100%;
+  overflow-y: auto;
+}
+
+.side {
+  border: 3px solid palevioletred;
+  height: 1000px;
+}
