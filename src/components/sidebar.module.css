@@ -1,9 +1,28 @@
 .sidebar {
   height: 100%;
+  padding-top: 20px;
+  margin-bottom: 20px;
   overflow-y: auto;
 }
 
 .side {
   border: 3px solid palevioletred;
   height: 1000px;
+}
+
+.sidebar>*:hover {
+  background-color: #4e4d4d
+}
+
+.copyright {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 30px;
+  color:rgb(170, 170, 170);
+
+}
+.llc{
+  font-size: 12px;
+  padding-bottom: 10px;
 }
