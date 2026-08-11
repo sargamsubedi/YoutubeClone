@@ -1,0 +1,32 @@
+
+
+.filterContainer{
+    padding-top: 10px;
+    position: sticky;
+    top: 0px;
+    display: flex;
+    gap: 10px;
+    background-color: rgb(0, 0, 0);
+    overflow-x: auto;
+
+}
+.filterContainer::-webkit-scrollbar{
+  display: none;
+}
+.filterButton{
+    background-color: #302f2fc1;
+    cursor: pointer;
+    height: 32px;
+    border-radius: 10px;
+    padding: 3px 15px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.selected{
+    color: black;
+    background-color: #fff;
+}

@@ -1,4 +1,5 @@
 import './App.css'
+import Filter from './components/Filter'
 import Navbar from './components/Navbar'
 import Sidebar from './components/Sidebar'
 
@@ -11,6 +12,7 @@ function App() {
         <Sidebar />
 
         <main className="main-content">
+          <Filter />
           <h1>This is for imitating main content</h1>
 
           {/* Add enough content to test scrolling */}
