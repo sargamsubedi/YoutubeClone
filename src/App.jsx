@@ -2,6 +2,7 @@ import './App.css'
 import Filter from './components/Filter'
 import Navbar from './components/Navbar'
 import Sidebar from './components/Sidebar'
+import Videos from './components/Videos'
 
 function App() {
   return (
@@ -13,7 +14,8 @@ function App() {
 
         <main className="main-content">
           <Filter />
-          <h1>This is for imitating main content</h1>
+
+          <Videos />
 
           {/* Add enough content to test scrolling */}
           <div style={{ height: '2000px' }}>

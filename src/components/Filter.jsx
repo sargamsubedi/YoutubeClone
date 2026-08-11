@@ -5,7 +5,7 @@ function Filter()
 {
 
     const [selectedFilter , setSelectedFilter] = useState("All");
-    const filterOptions =["All","Comedy","Science","All","Comedy","Science","All","Comedy","Science"]
+    const filterOptions =["All","Comedy","Science"]
     return(
         <div className={styles.filterContainer}>
 

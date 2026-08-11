@@ -1,4 +1,43 @@
 
 .cardContainer{
-    background-color: black;
+    /* background-color: rgb(231, 224, 224); */
+    margin: 10px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.img{
+    width: 100%;
+    border-radius: 20px;
+    margin-bottom: 3px;
+
+}
+
+.videoInfoContainer{
+display: flex;
+ gap: 10px;
+
+}
+
+.channelProfile
+{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: royalblue;
+}
+
+.videoData{
+ display: flex;
+ flex-direction: column;
+ gap: 5px;
+}
+.title{
+    font-weight: bold;
+    font-size: large;
+}
+
+.channelName , .viewsTime{
+    color: rgb(150, 149, 149);
+
+    font-weight: 600;
 }
