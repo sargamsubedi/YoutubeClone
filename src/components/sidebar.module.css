@@ -1,8 +1,34 @@
 .sidebar {
+
+  --scrollbar-thumb: transparent;
+
   height: 100%;
   padding-top: 20px;
   margin-bottom: 20px;
   overflow-y: auto;
+
+}
+
+.sidebar::-webkit-scrollbar {
+  width: 8px; 
+}
+
+/* The track (background) */
+.sidebar::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 5px;
+}
+
+/* The thumb (draggable part) */
+.sidebar::-webkit-scrollbar-thumb{
+  border-radius: 5px;
+  background-color: var(--scrollbar-thumb);
+}
+
+/* on hover change variable value so the thumbs color changes */
+.sidebar:hover{
+  --scrollbar-thumb: rgb(181, 179, 179);
+   
 }
 
 .side {
