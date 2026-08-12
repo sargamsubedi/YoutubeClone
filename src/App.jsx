@@ -19,7 +19,7 @@ function App() {
 
           {/* Add enough content to test scrolling */}
           <div style={{ height: '2000px' }}>
-            Main content
+            
           </div>
         </main>
       </div>
