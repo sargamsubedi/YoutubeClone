@@ -1,42 +1,59 @@
-
-.cardContainer{
-    /* background-color: rgb(231, 224, 224); */
+.cardContainer {
     margin: 10px;
+    margin-top: 25px;
     border-radius: 20px;
-    overflow: hidden;
+    position: relative;
+    z-index: 0;
 }
-.img{
+
+.cardContainer::before {
+    content: "";
+    position: absolute;
+    inset: -15px;
+    background-color: rgba(96, 97, 97, 0.467);
+    z-index: -1;
+    opacity: 0;
+    border-radius: 20px;
+    transition: all 1s;
+}
+
+.cardContainer:hover::before {
+    opacity: 1;
+}
+
+.img {
     width: 100%;
     border-radius: 20px;
     margin-bottom: 3px;
 
 }
 
-.videoInfoContainer{
-display: flex;
- gap: 10px;
+.videoInfoContainer {
+    display: flex;
+    gap: 10px;
 
 }
 
-.channelProfile
-{
+.channelProfile {
     width: 40px;
     height: 40px;
     border-radius: 50%;
     background-color: royalblue;
 }
 
-.videoData{
- display: flex;
- flex-direction: column;
- gap: 5px;
+.videoData {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }
-.title{
+
+.title {
     font-weight: bold;
     font-size: large;
 }
 
-.channelName , .viewsTime{
+.channelName,
+.viewsTime {
     color: rgb(150, 149, 149);
 
     font-weight: 600;
