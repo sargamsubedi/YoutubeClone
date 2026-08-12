@@ -1,11 +1,12 @@
 
 import { useState } from 'react';
 import styles from './filter.module.css'
+import useData from '../store/useData';
 function Filter()
 {
 
     const [selectedFilter , setSelectedFilter] = useState("All");
-    const filterOptions =["All","Comedy","Science"]
+    const filterOptions =useData(state=>state.filterOptions)
     return(
         <div className={styles.filterContainer}>
 

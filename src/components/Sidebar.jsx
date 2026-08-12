@@ -3,34 +3,17 @@ import SideButtons from './SideButtons'
 import homeIcon from '../assets/icons/home.svg';
 import shortsIcon from '../assets/icons/shorts.svg';
 import Division from './Division';
+import useData from '../store/useData';
 
 function Sidebar() {
   // array of object with channel image link and channel name , obtained from backend , hardcoded just to imitate 
-  const subscriptions = [{ img: "https://imgs.search.brave.com/_Hf9l4vUroQq5Gks-sFPdFBeNhJzsf_IU5SQ8_ZJjf4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4t/ZnJvbnQuZnJlZXBp/ay5jb20vaG9tZS9h/bm9uLXJ2bXAvY3Jl/YXRpdmUtc3VpdGUv/cGhvdG9ncmFwaHkv/cmVpbWFnaW5lLndl/YnA", channelName: "sargam" }]
+  const subscriptions = useData(state=>state.subscriptions);
 
-  const you_section = [
-    { img: '/images/channel.svg', contentName: "Your Channel" },
-    { img: '/images/history.svg', contentName: "History" },
-    { img: '/images/playlist.svg', contentName: "Playlist" },
-    { img: '/images/watch_later.svg', contentName: "Watch Later" },
-    { img: '/images/like.svg', contentName: "Liked Videos" },
-    { img: '/images/your_video.svg', contentName: "Your Videos" },
-    { img: '/images/downloads.svg', contentName: "Downloads" },
-    { img: '/images/courses.svg', contentName: "Courses" },
-    { img: '/images/clips.svg', contentName: "Clip" },
-  ];
+  const you_section = useData(state=>state.you_section)
 
-  const more = [
-    { img: "/favicon.svg.webp", contentName: "Try premium for $0" },
-    { img: "/favicon.svg.webp", contentName: "Youtube Music" },
-    { img: "/favicon.svg.webp", contentName: "Youtube Kids" }
-  ]
-  const explore = [
-    { img: '/images/music.svg', contentName: "Music" },
-    { img: '/images/gaming.svg', contentName: "Gaming" },
-    { img: '/images/sports.svg', contentName: "Sports" },
-    { img: '/images/membership.svg', contentName: "Membership" }
-  ]
+  const more = useData(state=>state.more)
+
+  const explore = useData(state=>state.explore)
   return (
     <aside className={styles.sidebar}>
 
