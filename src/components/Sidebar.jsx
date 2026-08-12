@@ -5,15 +5,45 @@ import shortsIcon from '../assets/icons/shorts.svg';
 import Division from './Division';
 import useData from '../store/useData';
 
-function Sidebar() {
+function Sidebar({ collapse }) {
+
   // array of object with channel image link and channel name , obtained from backend , hardcoded just to imitate 
-  const subscriptions = useData(state=>state.subscriptions);
+  const subscriptions = useData(state => state.subscriptions);
 
-  const you_section = useData(state=>state.you_section)
+  const you_section = useData(state => state.you_section)
 
-  const more = useData(state=>state.more)
+  const more = useData(state => state.more)
 
-  const explore = useData(state=>state.explore)
+  const explore = useData(state => state.explore)
+
+  const collapseSidebar = useData(state => state.collapseSidebar)
+
+
+  //for collapse
+
+  if (collapse) {
+    return (
+      <aside className={styles.sidebar}>
+
+        <SideButtons img={homeIcon} contentname="Home" collapse={collapse} />
+        <SideButtons img={shortsIcon} contentname="Shorts" collapse={collapse} />
+
+        {
+          collapseSidebar.map(sub => < SideButtons
+            key={sub.contentName}
+            img={sub.img} contentname={sub.contentName}
+            collapse={collapse}
+          />)
+        }
+      </aside>
+    )
+  }
+
+
+
+
+
+  //for expanded form 
   return (
     <aside className={styles.sidebar}>
 
@@ -73,14 +103,14 @@ function Sidebar() {
       <SideButtons img="/images/report.svg" contentname="Report History" />
       <Division />
 
-{/* copyright */}
+      {/* copyright */}
 
-<div className={styles.copyright}>
-  <div>About Press Copyright Contact us Creators Advertise Developers</div>
-  <div>Terms PrivacyPolicy & Safety How YouTube works Test new features</div>
-  <div className={styles.llc}>© 2026 Google LLC</div>
+      <div className={styles.copyright}>
+        <div>About Press Copyright Contact us Creators Advertise Developers</div>
+        <div>Terms PrivacyPolicy & Safety How YouTube works Test new features</div>
+        <div className={styles.llc}>© 2026 Google LLC</div>
 
-</div>
+      </div>
     </aside>
   )
 }

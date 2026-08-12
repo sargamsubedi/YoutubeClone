@@ -1,10 +1,11 @@
 .sidebar {
 
   --scrollbar-thumb: transparent;
-
+  width: max-content;
   height: 100%;
   padding-top: 20px;
   margin-bottom: 20px;
+  margin-right: 10px;
   overflow-y: auto;
 
 }
@@ -41,10 +42,13 @@
 }
 
 .copyright {
+  box-sizing: content-box;
   display: flex;
+  width: 150px;
   flex-direction: column;
   gap: 10px;
   padding: 30px;
+  padding-right: 50px;
   color:rgb(170, 170, 170);
 
 }

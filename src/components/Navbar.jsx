@@ -5,13 +5,13 @@ import searchIcon from '../assets/icons/search.svg';
 import notificationIcon from '../assets/icons/notification.svg';
 
 
-function Navbar() {
+function Navbar({setCollapse}) {
 
     return (
         <nav>
 
             <div className={styles.container}>
-                <div>
+                <div onClick={()=>setCollapse(prev=>!prev)}>
                     <img
                         className={styles.sidebarIcon}
                         src={sidebarIcon}

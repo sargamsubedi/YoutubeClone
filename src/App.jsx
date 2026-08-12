@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import './App.css'
 import Filter from './components/Filter'
 import Navbar from './components/Navbar'
@@ -5,12 +6,14 @@ import Sidebar from './components/Sidebar'
 import Videos from './components/Videos'
 
 function App() {
+
+  const [collapse, setCollapse] = useState(false);
   return (
     <div className="app">
-      <Navbar />
+      <Navbar setCollapse={setCollapse}/>
 
       <div className="main-sidebar-wrapper">
-        <Sidebar />
+        <Sidebar collapse={collapse} />
 
         <main className="main-content">
           <Filter />

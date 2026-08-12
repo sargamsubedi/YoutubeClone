@@ -1,12 +1,16 @@
 import styles from './sidebuttons.module.css'
-function SideButtons({img, contentname})
-{
-    return(
-        <div className={styles.sidebutton}>
+function SideButtons({ img, contentname, collapse }) {
+    return (
+        <div className={`${styles.sidebutton} ${collapse ? styles.collapse : ""}`}>
+            <div>
+                {
+                    img && <img className={styles.img} src={img} alt={contentname} />
+                }
+            </div>
             {
-            img && <img className={styles.img} src={img} alt={contentname} />
+                contentname && <div className={`${collapse ? styles.reduce : styles.content}`}>
+                    {contentname}</div>
             }
-            <div className={styles.content}>{contentname}</div>
         </div>
     )
 }

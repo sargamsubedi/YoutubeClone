@@ -19,3 +19,19 @@
     width: 100px;
     margin-left: 10%;
 }
+.collapse{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 50px;
+}
+/* because subscription channel image have border radius */
+.collapse .img{ 
+    border-radius: 0;
+}
+
+.reduce{
+    font-size: 0.7rem;
+}

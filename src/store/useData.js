@@ -28,7 +28,10 @@ const useData = create(() => ({
         { img: '/images/sports.svg', contentName: "Sports" },
         { img: '/images/membership.svg', contentName: "Membership" }
     ],
-
+   collapseSidebar :[
+        { img: '/images/subscriptions.svg', contentName: "Subscriptions" },
+        { img: '/images/you.svg', contentName: "You" }
+    ],
     // for filter
     filterOptions :["All", "Comedy", "Science"],
 
