@@ -7,6 +7,9 @@ nav {
     width: 30px;
 
 }
+.plusIcon{
+    width: 30px;
+}
 
 .notificationIcon{
     width: 30px;
@@ -47,9 +50,7 @@ nav {
     width: 100%;
 }
 
-.searchButton {
-    background-color: hsla(0, 0%, 100%, 0.277);
-}
+
 
 input {
     color: white;
@@ -71,13 +72,18 @@ input:focus {
 }
 
 .voiceSearch{
+    width: 30px;
     border-radius: 50%;
-    padding: 20px;
-    background-color: hsla(0, 0%, 100%, 0.277);
+    padding: 10px;
+    background-color: rgb(47, 47, 47);
+
 }
 
 .create{
-    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 20px;
     border-radius: 7em;
     background-color: rgb(47, 47, 47);
 }

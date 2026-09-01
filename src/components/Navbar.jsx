@@ -3,15 +3,17 @@ import sidebarIcon from '../assets/icons/sidebar.svg';
 import youtubeIcon from '../assets/icons/youtube.svg';
 import searchIcon from '../assets/icons/search.svg';
 import notificationIcon from '../assets/icons/notification.svg';
+import plus from '../assets/icons/plus.svg';
+import microphone from '../assets/icons/microphone.svg';
 
 
-function Navbar({setCollapse}) {
+function Navbar({ setCollapse }) {
 
     return (
         <nav>
 
             <div className={styles.container}>
-                <div onClick={()=>setCollapse(prev=>!prev)}>
+                <div onClick={() => setCollapse(prev => !prev)}>
                     <img
                         className={styles.sidebarIcon}
                         src={sidebarIcon}
@@ -40,14 +42,18 @@ function Navbar({setCollapse}) {
                         </div>
                     </div>
 
-                    <div className={styles.voiceSearch}>VO</div>
+                    <img src={microphone} alt="microphone"  className={styles.voiceSearch}/>
 
                 </div>
             </div>
             <div className={styles.container}>
 
 
-                <div className={styles.create}>+ Create</div>
+                <div className={styles.create}>
+                        <img src={plus} alt="plus" className={styles.plusIcon} /> 
+                   
+                         <p>Create</p>
+                </div>
                 <div className={styles.notification}>
 
                     <img
